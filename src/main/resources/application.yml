@@ -1,0 +1,6 @@
+#spring:
+#  main:
+#    banner-mode: off #关闭banner.txt
+spring:
+  profiles:
+    active: dev,prod

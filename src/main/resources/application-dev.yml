@@ -1,0 +1,51 @@
+server:
+  #Tomcat配置
+  tomcat:
+    min-spare-threads: 30 #最小空闲线程
+    max-threads: 1000   #最大线程数
+    uri-encoding: UTF-8  #uri编码
+  servlet:
+    context-path: /example #设置servlet的context
+  port: 8989
+
+spring:
+  application:
+    name: example
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    cache: false
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  resources:
+    chain:
+      strategy:
+        content:
+          paths: /**
+          enabled: true
+
+
+#日志配置
+logging:
+  level:
+    root: info
+  config: classpath:logback-spring.xml
+#配置外部属性源
+my:
+  #配置结构化bean属性源
+  prod:
+    url: http://dev.bar.com
+    name: dev
+  #配置集合类型多个属性值的配置(非bean类型)
+  servers:
+  - dev.bar.com
+  - foo.bar.com
+  #配置集合类型多个属性值的配置(bean类型)
+  objects:
+  - url: http://foo.bar.com
+    name: foo
+  - url: http://dev.bar.com
+    name: dev
+

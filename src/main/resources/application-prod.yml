@@ -1,0 +1,8 @@
+#阿里云存储参数配置
+aliyun:
+  oss:
+    flag: false
+    endpoint: http://oss-cn-shanghai.aliyuncs.com
+    accessKeyId: LTAI4FwwXbm4Wgb87ehB6M1y
+    accessKeySecret: V0VyFONR5me50H2pYZfhq96z2MznYo
+    bucketName: hq-mybuck-1996
